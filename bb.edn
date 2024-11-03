@@ -1,0 +1,6 @@
+{:tasks {start (shell "bb -m words.core")
+         watch {:requires ([babashka.fs :as fs])
+                :task (fs/list-dir ".")}}
+ :paths ["src"]
+ :pods {org.babashka/postgresql {:version "0.1.2"}}}
+
