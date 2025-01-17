@@ -9,6 +9,7 @@
          :password "123"
          :port     5432})
 
-(defn request []
+(defn request
+  []
   (pg/execute! db ["select * from word"]))
 
